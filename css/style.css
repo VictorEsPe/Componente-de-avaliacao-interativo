@@ -1,0 +1,150 @@
+:root{
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --Orange: hsl(25, 97%, 53%);
+
+  font-size: 62.5%;
+}
+
+/* ========== Geral ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Very-Dark-Blue);
+}
+
+h2 {
+  color: white;
+  margin-bottom: 1.6rem;
+}
+
+p {
+  color: var(--Light-Grey);
+  margin-bottom: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+/* ========== Card de avaliação ========== */
+.rating-container,
+.thank-you-container {
+  border-radius: 1rem;
+  background: linear-gradient(to bottom, hsl(212, 18%, 14%), hsl(220, 16%, 11%));
+  padding: 3.2rem 2.4rem;
+  max-width: 40rem;
+}
+
+.rating-container.hidden {
+  display: none;
+}
+
+/* Ícone  */
+.star-img img {
+  background-color: var(--Dark-Blue);
+  padding: 1.28rem;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+
+/* Opções de avaliação */
+.rating-choices ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-choices ul li {
+  margin: 0.8rem;
+}
+
+ul li .btn {
+  background-color: var(--Dark-Blue);
+  border-radius: 50%;
+  color: white;
+  width: 4.8rem;
+  height: 4.8rem;
+  transition: 0.3s;
+  padding-top: 0.48rem;
+}
+
+ul li .btn:hover {
+  background-color: var(--Light-Grey);
+}
+
+ul li .btn:focus {
+  background-color: var(--Orange);
+}
+
+/* Botão de envio */
+.submit-btn {
+  background-color: var(--Orange);
+  padding: 1rem 3.2rem 0.8rem;
+  width: 100%;
+  border-radius: 3rem;
+  color: white;
+  margin-top: 3.2rem;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-size: 1.44rem;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  color: var(--Orange);
+}
+
+/* ========== Card de agradecimento ========== */
+.thank-you-container {
+  display: none;
+  text-align: center;
+}
+
+.thank-you-container.show {
+  display: block;
+}
+
+#close-btn {
+  color: white;
+  cursor: pointer;
+  font-size: 2.3rem;
+  width: 1.8rem;
+  margin-left: 95%;
+}
+
+.thank-you-card-img {
+  margin-bottom: 3.2rem;
+}
+
+.user-rating p {
+  display: inline-block;
+  background-color: var(--Dark-Blue);
+  color: var(--Orange);
+  padding: 0.48rem 1.6rem 0;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3.2rem;
+}
+
+#chosen-rating {
+  margin-inline: 0.3rem;
+}
